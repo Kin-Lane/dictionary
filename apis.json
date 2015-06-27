@@ -1,0 +1,130 @@
+{
+  "name": "Kin Lane - Dictionary",
+  "description": "This is my default Dictionary API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
+  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-certificate.png",
+  "tags": [
+    "Application Programming Interface",
+    "API",
+    "Dictionary"
+  ],
+  "created": "2014-04-07",
+  "modified": "2014-07-09",
+  "url": "https://kin-lane.github.io/dictionary/apis.json",
+  "SpecificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "Dictionary",
+      "description": "A Dictionary API resource.",
+      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-certificate.png",
+      "humanURL": "https://kin-lane.github.io/dictionary/",
+      "baseURL": "http://Dictionary.api.kinlane.com",
+      "tags": [
+        "API",
+        "Application Programming Interface",
+        "Dictionary"
+      ],
+      "properties": [
+        {
+          "type": "Swagger",
+          "url": "https://kin-lane.github.io/dictionary/swagger.json"
+        },
+        {
+          "type": "x-postman",
+          "url": "https://kin-lane.github.io/dictionary/postman.json"
+        },
+        {
+          "type": "x-apimatic-sdks",
+          "url": "https://kin-lane.github.io/dictionary/code/"
+        },
+        {
+          "type": "x-api-science",
+          "url": "https://kin-lane.github.io/dictionary/status/"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "API Evangliest",
+          "email": "info@apievangelist.com",
+          "X-twitter": "apievangelist"
+        }
+      ]
+    }
+  ],
+  "include": [
+    {
+      "name": "API API (Inception)",
+      "url": "https://kin-lane.github.io/api/apis.json"
+    },
+    {
+      "name": "Audio API",
+      "url": "https://kin-lane.github.io/audio/apis.json"
+    },
+    {
+      "name": "Comment API",
+      "url": "https://kin-lane.github.io/comment/apis.json"
+    },
+    {
+      "name": "Curated API",
+      "url": "https://kin-lane.github.io/curated/apis.json"
+    },
+    {
+      "name": "Glossary API",
+      "url": "https://kin-lane.github.io/glossary/apis.json"
+    },
+    {
+      "name": "Image API",
+      "url": "https://kin-lane.github.io/image/apis.json"
+    },
+    {
+      "name": "Job API",
+      "url": "https://kin-lane.github.io/job/apis.json"
+    },
+    {
+      "name": "Link API",
+      "url": "https://kin-lane.github.io/link/apis.json"
+    },
+    {
+      "name": "Note API",
+      "url": "https://kin-lane.github.io/note/apis.json"
+    },
+    {
+      "name": "Organization API",
+      "url": "https://kin-lane.github.io/organization/apis.json"
+    },
+    {
+      "name": "Page API",
+      "url": "https://kin-lane.github.io/page/apis.json"
+    },
+    {
+      "name": "Patent API",
+      "url": "https://kin-lane.github.io/patent/apis.json"
+    },
+    {
+      "name": "People API",
+      "url": "https://kin-lane.github.io/people/apis.json"
+    },
+    {
+      "name": "Project API",
+      "url": "https://kin-lane.github.io/project/apis.json"
+    },
+    {
+      "name": "Tag API",
+      "url": "https://kin-lane.github.io/tag/apis.json"
+    },
+    {
+      "name": "Tool API",
+      "url": "https://kin-lane.github.io/tool/apis.json"
+    },
+    {
+      "name": "Video API",
+      "url": "https://kin-lane.github.io/video/apis.json"
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "API Evangliest",
+      "X-twitter": "apievangelist",
+      "email": "info@apievangelist.com"
+    }
+  ]
+}

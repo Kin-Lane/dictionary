@@ -1,0 +1,315 @@
+{
+	"id": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+	"name": "Certification",
+	"description": "This is an certification for all my certification entries. I use a single certification system to manage all my sites. Based upon tagging, I then publish each post out to its respective Github Page based repo.",
+	"order": [],
+	"folders": [
+		{
+			"id": "8782bbb3-fbac-4d5f-946c-4837482a548b",
+			"name": "certification",
+			"description": "Folder for certification",
+			"order": [
+				"c8144de5-e21d-4abb-ab6d-a1c2be21bdda",
+				"a7f4c1e0-875b-4b95-a104-6fb16b8fb7c0",
+				"5b057209-3ab3-4170-8f25-07690157d229",
+				"bd542181-9942-4f8d-8e90-b8decf4f0a2a",
+				"727d9209-c7c0-4d14-a248-b8c9f13ca502",
+				"aeb76578-be58-405a-8bad-df9a12909d9e",
+				"47991140-641f-4158-bb76-2e2f28da3cf2",
+				"3d3dc28a-15e9-40ee-a88c-2c6ae37f62e8",
+				"2b7351c3-c7b4-4c52-9656-842a80497b73",
+				"58568c4c-8e13-4d4b-b315-e582b3bb49f1"
+			],
+			"collection_name": "Certification",
+			"collection_id": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"collection": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"owner": "27278"
+		}
+	],
+	"timestamp": 1413302258635,
+	"owner": "27278",
+	"hasRequests": true,
+	"synced": false,
+	"requests": [
+		{
+			"id": "2b7351c3-c7b4-4c52-9656-842a80497b73",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/{{certification_id}}/tags/{tag}?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete certification tag",
+			"descriptionFormat": "html",
+			"time": 1435439811171,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "delete certification tag",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "3d3dc28a-15e9-40ee-a88c-2c6ae37f62e8",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/{{certification_id}}/tags/?appid={{appid}}&appkey={{appkey}}&tag={{tag}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add tag to certification",
+			"descriptionFormat": "html",
+			"time": 1435439811171,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "add tag to certification",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "47991140-641f-4158-bb76-2e2f28da3cf2",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/{{certification_id}}/tags/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "certification tags",
+			"descriptionFormat": "html",
+			"time": 1435439811171,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "certification tags",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "58568c4c-8e13-4d4b-b315-e582b3bb49f1",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/tags/{{tag}}/certification/?week={{week}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "certification tags by week certifications",
+			"descriptionFormat": "html",
+			"time": 1435439811171,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "certification tags by week certifications",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "5b057209-3ab3-4170-8f25-07690157d229",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/published/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "published certifications",
+			"descriptionFormat": "html",
+			"time": 1435439811170,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "published certifications",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "727d9209-c7c0-4d14-a248-b8c9f13ca502",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/{{certification_id}}/?appid={{appid}}&appkey={{appkey}}&post_date={{post_date}}&title={{title}}&author={{author}}&summary={{summary}}&body={{body}}&footer={{footer}}&status={{status}}&curated_id={{curated_id}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PUT",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "update certification",
+			"descriptionFormat": "html",
+			"time": 1435439811171,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "update certification",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "a7f4c1e0-875b-4b95-a104-6fb16b8fb7c0",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/?appid={{appid}}&appkey={{appkey}}&post_date={{post_date}}&title={{title}}&author={{author}}&summary={{summary}}&body={{body}}&footer={{footer}}&status={{status}}&curated_id={{curated_id}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add a certification post",
+			"descriptionFormat": "html",
+			"time": 1435439811170,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "add a certification post",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "aeb76578-be58-405a-8bad-df9a12909d9e",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/{{certification_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete certification",
+			"descriptionFormat": "html",
+			"time": 1435439811171,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "delete certification",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "bd542181-9942-4f8d-8e90-b8decf4f0a2a",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/{{certification_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "Returns the certification detail",
+			"descriptionFormat": "html",
+			"time": 1435439811171,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "Retrieve a certification using its slug",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		},
+		{
+			"id": "c8144de5-e21d-4abb-ab6d-a1c2be21bdda",
+			"headers": "",
+			"url": "http://certification.api.kinlane.com//certification/?appid={{appid}}&appkey={{appkey}}&query={{query}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "all certifications",
+			"descriptionFormat": "html",
+			"time": 1435439811169,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "87164fe2-416a-41e1-9e31-106c7e5b000d",
+			"synced": false,
+			"name": "all certifications",
+			"owner": "27278",
+			"folder": "8782bbb3-fbac-4d5f-946c-4837482a548b"
+		}
+	]
+}
