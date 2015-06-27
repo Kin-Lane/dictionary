@@ -1,2 +1,2 @@
-# dictionary
-This is my dictionary API.
+# certification
+This is a certification service.
