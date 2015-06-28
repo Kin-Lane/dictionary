@@ -100,7 +100,7 @@ $app->post($route, function ()  use ($app){
 						if($SwaggerPathResults && mysql_num_rows($SwaggerPathResults))
 							{
 							$SwaggerPath = mysql_fetch_assoc($SwaggerPathResults);
-							$path_id = $SwaggerPath['dictionary_id'];
+							$path_id = $SwaggerPath['id'];
 							}
 						else
 							{
