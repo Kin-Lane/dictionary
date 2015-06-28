@@ -212,14 +212,14 @@
         ]
       }
     },
-    "/dictionary/{Dictionary_id}/": {
+    "/dictionary/{dictionary_id}/": {
       "get": {
         "summary": "Retrieve a Dictionary using its slug",
         "description": "Returns the Dictionary detail",
         "operationId": "getDictionary",
         "parameters": [
           {
-            "name": "Dictionary_id",
+            "name": "dictionary_id",
             "in": "path",
             "description": "the unique id for Dictionary entry",
             "required": true,
@@ -270,7 +270,7 @@
         "operationId": "updateDictionary",
         "parameters": [
           {
-            "name": "Dictionary_id",
+            "name": "dictionary_id",
             "in": "path",
             "description": "the unique id for Dictionary entry",
             "required": true,
@@ -378,7 +378,7 @@
         "operationId": "deleteDictionary",
         "parameters": [
           {
-            "name": "Dictionary_id",
+            "name": "dictionary_id",
             "in": "path",
             "description": "the unique id for Dictionary entry",
             "required": true,
@@ -424,14 +424,14 @@
         ]
       }
     },
-    "/dictionary/{Dictionary_id}/tags/": {
+    "/dictionary/{dictionary_id}/tags/": {
       "get": {
         "summary": "Dictionary tags",
         "description": "Dictionary tags",
         "operationId": "getDictionaryTags",
         "parameters": [
           {
-            "name": "Dictionary_id",
+            "name": "dictionary_id",
             "in": "path",
             "description": "id for Dictionary",
             "required": true,
@@ -482,7 +482,7 @@
         "operationId": "addDictionaryTag",
         "parameters": [
           {
-            "name": "Dictionary_id",
+            "name": "dictionary_id",
             "in": "path",
             "description": "id for the Dictionary",
             "required": true,
@@ -535,14 +535,14 @@
         ]
       }
     },
-    "/dictionary/{Dictionary_id}/tags/{tag}": {
+    "/dictionary/{dictionary_id}/tags/{tag}": {
       "delete": {
         "summary": "delete Dictionary tag",
         "description": "delete Dictionary tag",
         "operationId": "deleteDictionaryTag",
         "parameters": [
           {
-            "name": "Dictionary_id",
+            "name": "dictionary_id",
             "in": "path",
             "description": "id for the Dictionary",
             "required": true,
@@ -638,6 +638,58 @@
           }
         ]
       }
+    },
+    "/dictionary/build/using/apisjson/": {
+      "post": {
+        "summary": "Build Dictionary",
+        "description": "Builds a dictionary using APIs.json",
+        "operationId": "buildDictionaryUsingAPIsJSON",
+        "parameters": [
+          {
+            "name": "apisjson_url",
+            "in": "formData",
+            "description": "the tag to filter by",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the dicationary API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the dictionary API",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dictionary Tag BLog Responsee",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Dictionary"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Dictionary"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
     }
   },
   "securityDefinitions": {
@@ -655,7 +707,7 @@
   "definitions": {
     "Dictionary": {
       "properties": {
-        "Dictionary_id": {
+        "dictionary_id": {
           "description": "unique id of the Dictionary",
           "type": "integer",
           "format": "id"
