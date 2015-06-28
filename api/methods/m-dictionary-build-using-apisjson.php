@@ -103,7 +103,7 @@ $app->post($route, function ()  use ($app){
 							$InsertQuery .= "dictionary_id,";
 							$InsertQuery .= "entry";
 							$InsertQuery .= ") VALUES(";
-							$InsertQuery .= $api_definition_id . ",";
+							$InsertQuery .= $dictionary_id . ",";
 							$InsertQuery .= "'" . mysql_real_escape_string($path) . "'";
 							$InsertQuery .= ")";
 							//echo $InsertQuery;
@@ -137,7 +137,7 @@ $app->post($route, function ()  use ($app){
 											$InsertQuery .= "dictionary_id,";
 											$InsertQuery .= "entry";
 											$InsertQuery .= ") VALUES(";
-											$InsertQuery .= $api_definition_id . ",";
+											$InsertQuery .= $dictionary_id . ",";
 											$InsertQuery .= "'" . mysql_real_escape_string($parameter_name) . "'";
 											$InsertQuery .= ")";
 											//echo $InsertQuery;
@@ -175,7 +175,7 @@ $app->post($route, function ()  use ($app){
 									$InsertQuery .= "dictionary_id,";
 									$InsertQuery .= "entry";
 									$InsertQuery .= ") VALUES(";
-									$InsertQuery .= $api_definition_id . ",";
+									$InsertQuery .= $dictionary_id . ",";
 									$InsertQuery .= "'" . mysql_real_escape_string($name) . "'";
 									$InsertQuery .= ")";
 									//echo $InsertQuery;
@@ -206,7 +206,7 @@ $app->post($route, function ()  use ($app){
 											$InsertQuery .= "dictionary_id,";
 											$InsertQuery .= "entry";
 											$InsertQuery .= ") VALUES(";
-											$InsertQuery .= $api_definition_id . ",";
+											$InsertQuery .= $dictionary_id . ",";
 											$InsertQuery .= "'" . mysql_real_escape_string($property_name) . "'";
 											$InsertQuery .= ")";
 											//echo $InsertQuery;
