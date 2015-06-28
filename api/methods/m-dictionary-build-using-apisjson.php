@@ -196,13 +196,13 @@ $app->post($route, function ()  use ($app){
 											$property_type = $value['type'];
 											}
 
-										$SwaggerPathQuery = "SELECT * FROM definition_parms WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $property_name . "'";
+										$SwaggerPathQuery = "SELECT * FROM definition_params WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $property_name . "'";
 										//echo $SwaggerQuery . "<br />";
 										$SwaggerPathResults = mysql_query($SwaggerPathQuery) or die('Query failed: ' . mysql_error());
 
 										if(mysql_num_rows($SwaggerPathResults)==0)
 											{
-											$InsertQuery = "INSERT INTO definition_parms(";
+											$InsertQuery = "INSERT INTO definition_params(";
 											$InsertQuery .= "dictionary_id,";
 											$InsertQuery .= "entry";
 											$InsertQuery .= ") VALUES(";
