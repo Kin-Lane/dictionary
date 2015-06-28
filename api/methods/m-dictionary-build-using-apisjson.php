@@ -32,7 +32,7 @@ $app->post($route, function ()  use ($app){
 		$api_created = $ObjectResult['created'];
 		$api_modified = $ObjectResult['modified'];
 
-		$SwaggerPathQuery = "SELECT dictionary_id FROM dictionary WHERE url = ''" . $apisjson_url . "'";
+		$SwaggerPathQuery = "SELECT dictionary_id FROM dictionary WHERE url = '" . $apisjson_url . "'";
 		//echo $SwaggerQuery . "<br />";
 		$SwaggerPathResults = mysql_query($SwaggerPathQuery) or die('Query failed: ' . mysql_error());
 
@@ -234,7 +234,7 @@ $app->post($route, function ()  use ($app){
 	$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
 	while ($Result = mysql_fetch_assoc($Results))
 		{
-		$entry = array();	
+		$entry = array();
 		$entry = $Result['entry'];
 		array_push($SwaggerPathTypeDetail['paths'], $entry);
 		}
