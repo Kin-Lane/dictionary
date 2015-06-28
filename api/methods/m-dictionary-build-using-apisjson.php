@@ -1,6 +1,6 @@
 <?php
 $route = '/dictionary/build/using/apisjson/';
-$app->get($route, function ()  use ($app){
+$app->post($route, function ()  use ($app){
 
 	$ReturnObject = array();
 
