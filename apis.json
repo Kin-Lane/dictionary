@@ -1,7 +1,7 @@
 {
   "name": "Kin Lane - Dictionary",
   "description": "This is my default Dictionary API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
-  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-certificate.png",
+  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dictionary-books.png",
   "tags": [
     "Application Programming Interface",
     "API",
