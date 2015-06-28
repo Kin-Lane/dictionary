@@ -15,7 +15,7 @@
     {
       "name": "Dictionary",
       "description": "A Dictionary API resource.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-certificate.png",
+      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dictionary-books.png",
       "humanURL": "https://kin-lane.github.io/dictionary/",
       "baseURL": "http://Dictionary.api.kinlane.com",
       "tags": [

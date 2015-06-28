@@ -107,40 +107,11 @@
             "type": "string"
           },
           {
-            "name": "summary",
-            "in": "formData",
-            "description": "summary for the Dictionary",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "body",
             "in": "formData",
             "description": "full text for the Dictionary",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "footer",
-            "in": "formData",
-            "description": "curated id the Dictionary originated from",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "status",
-            "in": "formData",
-            "description": "status of the Dictionary",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "curated_id",
-            "in": "formData",
-            "description": "full text for the Dictionary",
-            "required": true,
-            "type": "integer",
-            "format": "id"
           }
         ],
         "responses": {
@@ -724,26 +695,9 @@
           "description": "author of the Dictionary",
           "type": "string"
         },
-        "summary": {
-          "description": "summary for the Dictionary",
-          "type": "string"
-        },
         "body": {
           "description": "full body text of the Dictionary",
           "type": "string"
-        },
-        "footer": {
-          "description": "footer text for the Dictionary",
-          "type": "string"
-        },
-        "status": {
-          "description": "status of the Dictionary",
-          "type": "string"
-        },
-        "curated_id": {
-          "description": "curated id the Dictionary originated from",
-          "type": "integer",
-          "format": "id"
         }
       }
     },
