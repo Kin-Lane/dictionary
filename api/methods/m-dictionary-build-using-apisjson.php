@@ -18,7 +18,6 @@ $app->post($route, function ()  use ($app){
 
 	$ReturnObject['apisjson_url'] = $apisjson_url;
 
-	$question_array = explode(",",$questions);
 	$ObjectText = file_get_contents($apisjson_url);
 	$ObjectResult = json_decode($ObjectText,true);
 
