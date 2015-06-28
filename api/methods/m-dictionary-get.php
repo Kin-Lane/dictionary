@@ -31,18 +31,18 @@ $app->get($route, function ()  use ($app){
 	while ($Database = mysql_fetch_assoc($DatabaseResult))
 		{
 
-		$dictionary_id = $Database['ID'];
-		$post_date = $Database['Post_Date'];
-		$title = $Database['Title'];
-		$author = $Database['Author'];
-		$summary = $Database['Summary'];
-		$body = $Database['Body'];
-		$footer = $Database['Footer'];
-		$status = $Database['Status'];
-		$buildpage = $Database['Build_Page'];
-		$showonsite = $Database['Show_On_Site'];
-		$image = $Database['Feature_Image'];
-		$curated_id = $Database['News_ID'];
+		$dictionary_id = $Database['dictionary_id'];
+		$post_date = $Database['post_date'];
+		$title = $Database['title'];
+		$author = $Database['author'];
+		$summary = $Database['summary'];
+		$body = $Database['body'];
+		$footer = $Database['footer'];
+		$status = $Database['status'];
+		$buildpage = $Database['build_page'];
+		$showonsite = $Database['show_on_site'];
+		$image = $Database['feature_image'];
+		$curated_id = $Database['news_id'];
 
 		// manipulation zone
 
