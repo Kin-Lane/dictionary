@@ -181,6 +181,11 @@ $app->post($route, function ()  use ($app){
 			}
 		}
 
+	sort($ReturnObject['paths'], SORT_NATURAL | SORT_FLAG_CASE);
+	sort($ReturnObject['path_params'], SORT_NATURAL | SORT_FLAG_CASE);
+	sort($ReturnObject['definitions'], SORT_NATURAL | SORT_FLAG_CASE);
+	sort($ReturnObject['definition_params'], SORT_NATURAL | SORT_FLAG_CASE);
+
 	$app->response()->header("Content-Type", "application/json");
 	echo stripslashes(format_json(json_encode($ReturnObject)));
 
