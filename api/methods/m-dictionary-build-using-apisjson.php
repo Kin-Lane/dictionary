@@ -186,7 +186,7 @@ $app->post($route, function ()  use ($app){
 	natsort($ReturnObject['definitions']);
 	natsort($ReturnObject['definition_params']);
 
-	$CleanObject = json_decode(json_encode($ReturnObject),true);
+	$CleanObject = json_decode(json_encode($ReturnObject),false);
 
 	$app->response()->header("Content-Type", "application/json");
 	echo stripslashes(format_json(json_encode($CleanObject)));
