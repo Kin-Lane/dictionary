@@ -1,2 +1,2 @@
-# certification
-This is a certification service.
+# Dictionary
+This is a dictionary service.

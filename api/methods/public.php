@@ -1,5 +1,5 @@
 <?php
 
-require_once('m-certification-get.php');
+require_once('m-dictionary-get.php');
 
 ?>

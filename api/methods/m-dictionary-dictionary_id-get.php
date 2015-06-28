@@ -1,20 +1,20 @@
 <?php
-$route = '/certification/:certification_id/';
-$app->get($route, function ($certification_id)  use ($app){
+$route = '/dictionary/:dictionary_id/';
+$app->get($route, function ($dictionary_id)  use ($app){
 
 	$host = $_SERVER['HTTP_HOST'];
-	$certification_id = prepareIdIn($certification_id,$host);
+	$dictionary_id = prepareIdIn($dictionary_id,$host);
 
 	$ReturnObject = array();
-		
-	$Query = "SELECT * FROM certification WHERE ID = " . $certification_id;
-	
+
+	$Query = "SELECT * FROM dictionary WHERE ID = " . $dictionary_id;
+
 	$DatabaseResult = mysql_query($Query) or die('Query failed: ' . mysql_error());
-	  
+
 	while ($Database = mysql_fetch_assoc($DatabaseResult))
 		{
-						
-		$certification_id = $Database['ID'];
+
+		$dictionary_id = $Database['ID'];
 		$post_date = $Database['Post_Date'];
 		$title = $Database['Title'];
 		$author = $Database['Author'];
@@ -24,15 +24,15 @@ $app->get($route, function ($certification_id)  use ($app){
 		$status = $Database['Status'];
 		$buildpage = $Database['Build_Page'];
 		$showonsite = $Database['Show_On_Site'];
-		$image = $Database['Feature_Image'];		
-		$curated_id = $Database['News_ID'];		
-				
+		$image = $Database['Feature_Image'];
+		$curated_id = $Database['News_ID'];
+
 		// manipulation zone
 
-		$certification_id = prepareIdOut($certification_id,$host);
-		
+		$dictionary_id = prepareIdOut($dictionary_id,$host);
+
 		$F = array();
-		$F['certification_id'] = $certification_id;
+		$F['dictionary_id'] = $dictionary_id;
 		$F['post_date'] = $post_date;
 		$F['title'] = $title;
 		$F['author'] = $author;
@@ -44,7 +44,7 @@ $app->get($route, function ($certification_id)  use ($app){
 		$F['build_page'] = $buildpage;
 		$F['show_on_site'] = $showonsite;
 		$F['curated_id'] = $curated_id;
-		
+
 		$ReturnObject = $F;
 		}
 
