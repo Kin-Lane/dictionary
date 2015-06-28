@@ -93,11 +93,16 @@ $app->post($route, function ()  use ($app){
 						{
 						$path = $key;
 
-						$SwaggerPathQuery = "SELECT * FROM paths WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $path . "'";
+						$SwaggerPathQuery = "SELECT id FROM paths WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $path . "'";
 						//echo $SwaggerQuery . "<br />";
 						$SwaggerPathResults = mysql_query($SwaggerPathQuery) or die('Query failed: ' . mysql_error());
 
-						if(mysql_num_rows($SwaggerPathResults)==0)
+						if($SwaggerPathResults && mysql_num_rows($SwaggerPathResults))
+							{
+							$SwaggerPath = mysql_fetch_assoc($SwaggerPathResults);
+							$path_id = $SwaggerPath['dictionary_id'];
+							}
+						else
 							{
 							$InsertQuery = "INSERT INTO paths(";
 							$InsertQuery .= "dictionary_id,";
@@ -108,7 +113,7 @@ $app->post($route, function ()  use ($app){
 							$InsertQuery .= ")";
 							//echo $InsertQuery;
 							mysql_query($InsertQuery) or die('Query failed: ' . mysql_error());
-							$Swagger_Path_ID = mysql_insert_id();
+							$path_id = mysql_insert_id();
 							}
 
 						foreach($value as $key2 => $operation)
@@ -127,16 +132,18 @@ $app->post($route, function ()  use ($app){
 										{
 										$parameter_name = $parameter['name'];
 
-										$SwaggerPathQuery = "SELECT * FROM path_params WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $parameter_name . "'";
+										$SwaggerPathQuery = "SELECT * FROM path_params WHERE path_id = " . $path_id . " AND dictionary_id = " . $dictionary_id . " AND entry = '" . $parameter_name . "'";
 										//echo $SwaggerQuery . "<br />";
 										$SwaggerPathResults = mysql_query($SwaggerPathQuery) or die('Query failed: ' . mysql_error());
 
 										if(mysql_num_rows($SwaggerPathResults)==0)
 											{
 											$InsertQuery = "INSERT INTO path_params(";
+											$InsertQuery .= "path_id,";
 											$InsertQuery .= "dictionary_id,";
 											$InsertQuery .= "entry";
 											$InsertQuery .= ") VALUES(";
+											$InsertQuery .= $path_id . ",";
 											$InsertQuery .= $dictionary_id . ",";
 											$InsertQuery .= "'" . mysql_real_escape_string($parameter_name) . "'";
 											$InsertQuery .= ")";
@@ -165,11 +172,16 @@ $app->post($route, function ()  use ($app){
 
 								$name = $key;
 
-								$SwaggerPathQuery = "SELECT * FROM definitions WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $name . "'";
+								$SwaggerPathQuery = "SELECT id FROM definitions WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $name . "'";
 								//echo $SwaggerQuery . "<br />";
 								$SwaggerPathResults = mysql_query($SwaggerPathQuery) or die('Query failed: ' . mysql_error());
 
-								if(mysql_num_rows($SwaggerPathResults)==0)
+								if($SwaggerPathResults && mysql_num_rows($SwaggerPathResults))
+									{
+									$SwaggerPath = mysql_fetch_assoc($SwaggerPathResults);
+									$definition_id = $SwaggerPath['id'];
+									}
+								else
 									{
 									$InsertQuery = "INSERT INTO definitions(";
 									$InsertQuery .= "dictionary_id,";
@@ -180,7 +192,7 @@ $app->post($route, function ()  use ($app){
 									$InsertQuery .= ")";
 									//echo $InsertQuery;
 									mysql_query($InsertQuery) or die('Query failed: ' . mysql_error());
-									$Swagger_Path_ID = mysql_insert_id();
+									$definition_id = mysql_insert_id();
 									}
 
 								if(isset( $value['properties']))
@@ -196,16 +208,18 @@ $app->post($route, function ()  use ($app){
 											$property_type = $value['type'];
 											}
 
-										$SwaggerPathQuery = "SELECT * FROM definition_params WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $property_name . "'";
+										$SwaggerPathQuery = "SELECT * FROM definition_params WHERE definition_id = " . $definition_id . " AND dictionary_id = " . $dictionary_id . " AND entry = '" . $property_name . "'";
 										//echo $SwaggerQuery . "<br />";
 										$SwaggerPathResults = mysql_query($SwaggerPathQuery) or die('Query failed: ' . mysql_error());
 
 										if(mysql_num_rows($SwaggerPathResults)==0)
 											{
 											$InsertQuery = "INSERT INTO definition_params(";
+											$InsertQuery .= "definition_id,";
 											$InsertQuery .= "dictionary_id,";
 											$InsertQuery .= "entry";
 											$InsertQuery .= ") VALUES(";
+											$InsertQuery .= $definition_id . ",";
 											$InsertQuery .= $dictionary_id . ",";
 											$InsertQuery .= "'" . mysql_real_escape_string($property_name) . "'";
 											$InsertQuery .= ")";
@@ -218,55 +232,59 @@ $app->post($route, function ()  use ($app){
 									}
 								}
 							}
-
 					}
 				}
 			}
 		}
 
 	$ReturnObject['paths'] = array();
-	$ReturnObject['path_params'] = array();
 	$ReturnObject['definitions'] = array();
-	$ReturnObject['definition_params'] = array();
 
-	$Query = "SELECT entry FROM paths WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
+	$Query = "SELECT id,entry FROM paths WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
 	//echo $Query . "<br />";
 	$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
 	while ($Result = mysql_fetch_assoc($Results))
 		{
+		$path_id = $Result['id'];
+
 		$entry = array();
-		$entry = $Result['entry'];
+		$entry['name'] = $Result['entry'];
+		$entry['params'] = array();
+
+		$Query = "SELECT entry FROM path_params WHERE path_id = " . $path_id . " AND dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
+		//echo $Query . "<br />";
+		$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
+		while ($Result = mysql_fetch_assoc($Results))
+			{
+			$params = array();
+			$params = $Result['entry'];
+			array_push($entry['params'], $params);
+			}
+
 		array_push($ReturnObject['paths'], $entry);
 		}
 
-	$Query = "SELECT entry FROM path_params WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
+	$Query = "SELECT id,entry FROM definitions WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
 	//echo $Query . "<br />";
 	$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
 	while ($Result = mysql_fetch_assoc($Results))
 		{
-		$entry = array();
-		$entry = $Result['entry'];
-		array_push($ReturnObject['path_params'], $entry);
-		}
+		$definition_id = $Result['id'];
 
-	$Query = "SELECT entry FROM definitions WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
-	//echo $Query . "<br />";
-	$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
-	while ($Result = mysql_fetch_assoc($Results))
-		{
 		$entry = array();
-		$entry = $Result['entry'];
+		$entry['name'] = $Result['entry'];
+		$entry['params'] = array();
+
+		$Query = "SELECT entry FROM definition_params WHERE definition_id = " . $definition_id . " AND dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
+		//echo $Query . "<br />";
+		$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
+		while ($Result = mysql_fetch_assoc($Results))
+			{
+			$params = array();
+			$params = $Result['entry'];
+			array_push($entry['params'], $params);
+			}
 		array_push($ReturnObject['definitions'], $entry);
-		}
-
-	$Query = "SELECT entry FROM definition_params WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
-	//echo $Query . "<br />";
-	$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
-	while ($Result = mysql_fetch_assoc($Results))
-		{
-		$entry = array();
-		$entry = $Result['entry'];
-		array_push($ReturnObject['definition_params'], $entry);
 		}
 
 	$app->response()->header("Content-Type", "application/json");
