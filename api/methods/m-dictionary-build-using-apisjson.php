@@ -236,7 +236,7 @@ $app->post($route, function ()  use ($app){
 		{
 		$entry = array();
 		$entry = $Result['entry'];
-		array_push($SwaggerPathTypeDetail['paths'], $entry);
+		array_push($ReturnObject['paths'], $entry);
 		}
 
 	$Query = "SELECT entry FROM path_params WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
@@ -246,7 +246,7 @@ $app->post($route, function ()  use ($app){
 		{
 		$entry = array();
 		$entry = $Result['entry'];
-		array_push($SwaggerPathTypeDetail['path_params'], $entry);
+		array_push($ReturnObject['path_params'], $entry);
 		}
 
 	$Query = "SELECT entry FROM definitions WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
@@ -256,7 +256,7 @@ $app->post($route, function ()  use ($app){
 		{
 		$entry = array();
 		$entry = $Result['entry'];
-		array_push($SwaggerPathTypeDetail['definitions'], $entry);
+		array_push($ReturnObject['definitions'], $entry);
 		}
 
 	$Query = "SELECT entry FROM definition_params WHERE dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
@@ -266,11 +266,11 @@ $app->post($route, function ()  use ($app){
 		{
 		$entry = array();
 		$entry = $Result['entry'];
-		array_push($SwaggerPathTypeDetail['definition_params'], $entry);
+		array_push($ReturnObject['definition_params'], $entry);
 		}
 
 	$app->response()->header("Content-Type", "application/json");
-	echo stripslashes(format_json(json_encode($CleanObject)));
+	echo stripslashes(format_json(json_encode($ReturnObject)));
 
 	});
 ?>
