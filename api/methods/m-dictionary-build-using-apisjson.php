@@ -64,7 +64,18 @@ $app->post($route, function ()  use ($app){
 
 						$P = array();
 						$P = $path;
-						array_push($ReturnObject['paths'], $P);
+						$Already = 0;
+						foreach($ReturnObject['paths'] as $CheckPath)
+								{
+								if(trim($CheckPath)==trim($path))
+									{
+									$Already = 1;
+									}
+								}
+						if($Already==0)
+							{
+							array_push($ReturnObject['paths'], $P);
+							}
 
 						foreach($value as $key2 => $operation)
 							{
@@ -84,7 +95,18 @@ $app->post($route, function ()  use ($app){
 
 										$P = array();
 										$P = $parameter_name;
-										array_push($ReturnObject['path_params'], $P);
+										$Already = 0;
+										foreach($ReturnObject['path_params'] as $CheckPathParam)
+												{
+												if(trim($CheckPathParam)==trim($parameter_name))
+													{
+													$Already = 1;
+													}
+												}
+										if($Already==0)
+											{
+											array_push($ReturnObject['path_params'], $P);
+											}
 
 										}
 									}
@@ -108,7 +130,18 @@ $app->post($route, function ()  use ($app){
 
 								$P = array();
 								$P = $name;
-								array_push($ReturnObject['definitions'], $P);
+								$Already = 0;
+								foreach($ReturnObject['definitions'] as $CheckDefinitions)
+										{
+										if(trim($CheckDefinitions)==trim($name))
+											{
+											$Already = 1;
+											}
+										}
+								if($Already==0)
+									{
+									array_push($ReturnObject['definitions'], $P);
+									}
 
 								if(isset( $value['properties']))
 									{
@@ -124,8 +157,19 @@ $app->post($route, function ()  use ($app){
 											}
 
 										$P = array();
-										$P = $property_type;
-										array_push($ReturnObject['definition_params'], $P);
+										$P = $property_name;
+										$Already = 0;
+										foreach($ReturnObject['definitions'] as $CheckDefinitionParam)
+												{
+												if(trim($CheckDefinitionParam)==trim($property_name))
+													{
+													$Already = 1;
+													}
+												}
+										if($Already==0)
+											{
+											array_push($ReturnObject['definition_params'], $P);
+											}
 
 										}
 									}
