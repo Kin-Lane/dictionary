@@ -180,14 +180,16 @@ $app->post($route, function ()  use ($app){
 				}
 			}
 		}
-		
-	asort($ReturnObject['paths']);
-	asort($ReturnObject['path_params']);
-	asort($ReturnObject['definitions']);
-	asort($ReturnObject['definition_params']);
+
+	natsort($ReturnObject['paths']);
+	natsort($ReturnObject['path_params']);
+	natsort($ReturnObject['definitions']);
+	natsort($ReturnObject['definition_params']);
+
+	$CleanObject = json_decode(json_encode($ReturnObject),true);
 
 	$app->response()->header("Content-Type", "application/json");
-	echo stripslashes(format_json(json_encode($ReturnObject)));
+	echo stripslashes(format_json(json_encode($CleanObject)));
 
 	});
 ?>
