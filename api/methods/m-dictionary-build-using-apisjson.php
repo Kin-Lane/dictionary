@@ -48,7 +48,7 @@ $app->post($route, function ()  use ($app){
 			$InsertQuery .= "title,";
 			$InsertQuery .= "body,";
 			$InsertQuery .= "url,";
-			$InsertQuery .= "featured_image";
+			$InsertQuery .= "feature_image";
 
 			$InsertQuery .= ") VALUES(";
 
