@@ -43,7 +43,7 @@ $app->post($route, function ()  use ($app){
 			}
 		else
 			{
-			$InsertQuery = "INSERT INTO dictionary_id(";
+			$InsertQuery = "INSERT INTO dictionary(";
 
 			$InsertQuery .= "title,";
 			$InsertQuery .= "body,";
