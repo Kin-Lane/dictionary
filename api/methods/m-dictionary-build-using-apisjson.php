@@ -4,11 +4,6 @@ $app->post($route, function ()  use ($app){
 
 	$ReturnObject = array();
 
-	$ReturnObject['paths'] = array();
-	$ReturnObject['path_params'] = array();
-	$ReturnObject['definitions'] = array();
-	$ReturnObject['definition_params'] = array();
-
 	$ask_date = date('Y-m-d H:i:s');
 
  	$request = $app->request();
@@ -251,13 +246,13 @@ $app->post($route, function ()  use ($app){
 		$entry['name'] = $Result['entry'];
 		$entry['params'] = array();
 
-		$Query = "SELECT entry FROM path_params WHERE path_id = " . $path_id . " AND dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
-		//echo $Query . "<br />";
-		$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
-		while ($Result = mysql_fetch_assoc($Results))
+		$ParamQuery = "SELECT entry FROM path_params WHERE path_id = " . $path_id . " AND dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
+		//echo $ParamQuery . "<br />";
+		$ParamResults = mysql_query($ParamQuery) or die('Query failed: ' . mysql_error());
+		while ($ParamResult = mysql_fetch_assoc($ParamResults))
 			{
 			$params = array();
-			$params = $Result['entry'];
+			$params = $ParamResult['entry'];
 			array_push($entry['params'], $params);
 			}
 
@@ -275,13 +270,13 @@ $app->post($route, function ()  use ($app){
 		$entry['name'] = $Result['entry'];
 		$entry['params'] = array();
 
-		$Query = "SELECT entry FROM definition_params WHERE definition_id = " . $definition_id . " AND dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
-		//echo $Query . "<br />";
-		$Results = mysql_query($Query) or die('Query failed: ' . mysql_error());
-		while ($Result = mysql_fetch_assoc($Results))
+		$ParamQuery = "SELECT entry FROM definition_params WHERE definition_id = " . $definition_id . " AND dictionary_id = " . $dictionary_id . " ORDER BY entry ASC";
+		//echo $ParamQuery . "<br />";
+		$ParamResults = mysql_query($ParamQuery) or die('Query failed: ' . mysql_error());
+		while ($ParamResult = mysql_fetch_assoc($ParamResults))
 			{
 			$params = array();
-			$params = $Result['entry'];
+			$params = $ParamResult['entry'];
 			array_push($entry['params'], $params);
 			}
 		array_push($ReturnObject['definitions'], $entry);
