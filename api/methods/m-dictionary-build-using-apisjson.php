@@ -46,14 +46,14 @@ $app->post($route, function ()  use ($app){
 			$InsertQuery = "INSERT INTO dictionary_id(";
 
 			$InsertQuery .= "title,";
-			$InsertQuery .= "body,";
+			//$InsertQuery .= "body,";
 			$InsertQuery .= "url,";
 			$InsertQuery .= "featured_image";
 
 			$InsertQuery .= ") VALUES(";
 
 			$InsertQuery .= "'" . mysql_real_escape_string($api_json_name) . "'',";
-			$InsertQuery .= "'" . mysql_real_escape_string($api_description) . "',";
+			//$InsertQuery .= "'" . mysql_real_escape_string($api_description) . "',";
 			$InsertQuery .= "'" . mysql_real_escape_string($apisjson_url) . "',";
 			$InsertQuery .= "'" . mysql_real_escape_string($api_image) . "'";
 
