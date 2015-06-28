@@ -1,0 +1,1 @@
+{"mixinTypes":["contribution"],"runners":{"configs":{"system:/php/web/php56_apache2":{"ram":1000,"variables":{},"options":{}}},"default":"system:/php/web/php56_apache2"},"builders":{"configs":{}},"description":"This is my dictionary API.","type":"php","attributes":{"language":["php"],"contribute_branch":["gh-pages"],"contribute_mode":["contribute"]}}

@@ -73,70 +73,70 @@
         "parameters": [
           {
             "name": "appid",
-            "in": "query",
+            "in": "formData",
             "description": "your appid for accessing the Dictionary",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "query",
+            "in": "formData",
             "description": "your appkey for accessing the Dictionary",
             "required": true,
             "type": "string"
           },
           {
             "name": "post_date",
-            "in": "query",
+            "in": "formData",
             "description": "date the Dictionary was posted",
             "required": true,
             "type": "string"
           },
           {
             "name": "title",
-            "in": "query",
+            "in": "formData",
             "description": "ttle for the Dictionary",
             "required": true,
             "type": "string"
           },
           {
             "name": "author",
-            "in": "query",
+            "in": "formData",
             "description": "author of the Dictionary",
             "required": true,
             "type": "string"
           },
           {
             "name": "summary",
-            "in": "query",
+            "in": "formData",
             "description": "summary for the Dictionary",
             "required": true,
             "type": "string"
           },
           {
             "name": "body",
-            "in": "query",
+            "in": "formData",
             "description": "full text for the Dictionary",
             "required": true,
             "type": "string"
           },
           {
             "name": "footer",
-            "in": "query",
+            "in": "formData",
             "description": "curated id the Dictionary originated from",
             "required": true,
             "type": "string"
           },
           {
             "name": "status",
-            "in": "query",
+            "in": "formData",
             "description": "status of the Dictionary",
             "required": true,
             "type": "string"
           },
           {
             "name": "curated_id",
-            "in": "query",
+            "in": "formData",
             "description": "full text for the Dictionary",
             "required": true,
             "type": "integer",
