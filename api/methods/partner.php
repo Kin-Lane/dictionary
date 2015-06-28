@@ -18,4 +18,6 @@ require_once('m-dictionary-dictionary_id-tags-post.php');
 require_once('m-dictionary-dictionary_id-put.php');
 require_once('m-dictionary-dictionary_id-delete.php');
 
+require_once('m-dictionary-build-using-apisjson.php');
+
 ?>
