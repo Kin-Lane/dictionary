@@ -165,13 +165,13 @@ $app->post($route, function ()  use ($app){
 
 								$name = $key;
 
-								$SwaggerPathQuery = "SELECT * FROM defintions WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $name . "'";
+								$SwaggerPathQuery = "SELECT * FROM definitions WHERE dictionary_id = " . $dictionary_id . " AND entry = '" . $name . "'";
 								//echo $SwaggerQuery . "<br />";
 								$SwaggerPathResults = mysql_query($SwaggerPathQuery) or die('Query failed: ' . mysql_error());
 
 								if(mysql_num_rows($SwaggerPathResults)==0)
 									{
-									$InsertQuery = "INSERT INTO defintions(";
+									$InsertQuery = "INSERT INTO definitions(";
 									$InsertQuery .= "dictionary_id,";
 									$InsertQuery .= "entry";
 									$InsertQuery .= ") VALUES(";
