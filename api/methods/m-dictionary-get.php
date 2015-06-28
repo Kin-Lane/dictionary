@@ -35,14 +35,7 @@ $app->get($route, function ()  use ($app){
 		$post_date = $Database['post_date'];
 		$title = $Database['title'];
 		$author = $Database['author'];
-		$summary = $Database['summary'];
 		$body = $Database['body'];
-		$footer = $Database['footer'];
-		$status = $Database['status'];
-		$buildpage = $Database['build_page'];
-		$showonsite = $Database['show_on_site'];
-		$image = $Database['feature_image'];
-		$curated_id = $Database['news_id'];
 
 		// manipulation zone
 
@@ -54,14 +47,7 @@ $app->get($route, function ()  use ($app){
 		$F['post_date'] = $post_date;
 		$F['title'] = $title;
 		$F['author'] = $author;
-		$F['summary'] = $summary;
 		$F['body'] = $body;
-		$F['footer'] = $footer;
-		$F['status'] = $status;
-		$F['image'] = $image;
-		$F['build_page'] = $buildpage;
-		$F['show_on_site'] = $showonsite;
-		$F['curated_id'] = $curated_id;
 
 		array_push($ReturnObject, $F);
 		}
