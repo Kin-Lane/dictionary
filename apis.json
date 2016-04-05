@@ -1,20 +1,20 @@
 [{
-	"name": "Curated API",
-	"description": "As I look through the thousands of tweets, blog posts, and other items I read from across the API space, I curate them as part of my regular research. I put them into each research bucket, and make them availble via each reserch project. You can access via this API, and use in real-time as I curate and manage each week.",
-	"image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-abundance.png",
+	"name": "Kin Lane Dictionary API",
+	"description": "I am developing this API to help me track on terms used across the API space. I am trying to make available via an API so I can use across my network, while also opening up for others to use as well. This API is definitely still a work in progress, and one of my lesser formed APIs.",
+	"image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-certificate.png",
 	"x-open-ranking": "0",
-	"tags": ["Kin Lane Curated APi"],
+	"tags": [],
 	"created": "2016-04-04",
 	"modified": "2016-04-04",
-	"url": "https://kin-lane.github.io/curated/"
+	"url": "https://kin-lane.github.io/dictionary/"
 	"specificationVersion": "0.14",
 	"apis": [{
-		"name": "Kin Lane Curated",
-		"description": "<p>As I look through the thousands of tweets, blog posts, and other items I read from across the API space, I curate them as part of my regular research. I put them into each research bucket, and make them availble via each reserch project. You can access via this API, and use in real-time as I curate and manage each week.</p>",
+		"name": "Kin Lane Dictionary API",
+		"description": "This is my master org.",
 		"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/kin.png",
-		"humanURL": "https://kin-lane.github.io/curated/",
-		"baseURL": "https://kin-lane.github.io/curated/",
-		"tags": ["Kin Lane Curated APi"],
+		"humanURL": "",
+		"baseURL": "",
+		"tags": [],
 		"properties": [{
 			"type": "x-openapi-spec",
 			"url": "api-commons/openapi-spec.json"
@@ -110,7 +110,7 @@
 	}],
 	"include": [{
 		"name": "Parent",
-		"url": "https://kin-lane.github.io/curated//apis.yaml"
+		"url": "https://kin-lane.github.io/dictionary//apis.yaml"
 	}],
 	"maintainers": [{
 		"FN": "Kin Lane",
