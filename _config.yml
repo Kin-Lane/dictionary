@@ -75,15 +75,6 @@ navigation:
     size2: 0
     padding: 2
     decorate: 0
-  - label1: Plans
-    link1: /dictionary/plans/
-    size1: 80
-    extend: 0
-    label2:
-    link2:
-    size2: 0
-    padding: 2
-    decorate: 0
   - label1: Support
     link1: /dictionary/support/
     size1: 80
@@ -93,6 +84,15 @@ navigation:
     size2: 0
     padding: 2
     decorate: 0
+  - label1: Return to Master Portal
+    link1: http://developer.kinlane.com
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 10
+    padding: 10
+    decorate: 2    
   - label1: Return to API Evangelist
     link1: http://apievangelist.com
     size1: 80

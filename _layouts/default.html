@@ -23,6 +23,7 @@
               <a href="{{ nav.link1 }}" style="font-size: {{ nav.size1 }}%;">
                 {% if nav.decorate == 1 %} <span style="font-size: {{ nav.size1 }}">&#8668;</span>{% endif %}
                 {{ nav.label1 }}
+                {% if nav.decorate == 2 %} <span style="font-size: {{ nav.size1 }}">&#8669;</span>{% endif %}
               </a>
               {% if nav.extend == 1 %} <span style="font-size: {{ nav.size2 }}%;">(<a href="{{ site.url }}{{ nav.link2 }}">{{ nav.label2 }}</a>)</span>{% endif %}
             </li>
