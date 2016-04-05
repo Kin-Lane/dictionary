@@ -1,170 +1,120 @@
-{
-  "name": "Kin Lane - Dictionary",
-  "description": "This is my default Dictionary API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
-  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dictionary-books.png",
-  "tags": [
-    "Application Programming Interface",
-    "API",
-    "Dictionary"
-  ],
-  "created": "2014-04-07",
-  "modified": "2014-07-09",
-  "url": "https://kin-lane.github.io/dictionary/apis.json",
-  "SpecificationVersion": "0.14",
-  "apis": [
-    {
-      "name": "Dictionary",
-      "description": "A Dictionary API resource.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dictionary-books.png",
-      "humanURL": "https://kin-lane.github.io/dictionary/",
-      "baseURL": "http://Dictionary.api.kinlane.com",
-      "tags": [
-        "API",
-        "Application Programming Interface",
-        "Dictionary"
-      ],
-      "properties": [
-        {
-          "type": "Swagger",
-          "url": "https://kin-lane.github.io/dictionary/swagger.json"
-        },
-        {
-          "type": "x-postman",
-          "url": "https://kin-lane.github.io/dictionary/postman.json"
-        },
-        {
-          "type": "x-apimatic-sdks",
-          "url": "https://kin-lane.github.io/dictionary/code/"
-        },
-        {
-          "type": "x-api-science",
-          "url": "https://kin-lane.github.io/dictionary/status/"
-        }
-      ],
-      "contact": [
-        {
-          "FN": "API Evangliest",
-          "email": "info@apievangelist.com",
-          "X-twitter": "apievangelist"
-        }
-      ]
-    }
-  ],
-  "include": [
-    {
-      "name": "API API (Inception)",
-      "url": "https://kin-lane.github.io/api/apis.json"
-    },
-    {
-      "name": "Audio API",
-      "url": "https://kin-lane.github.io/audio/apis.json"
-    },
-    {
-      "name": "Blog API",
-      "url": "https://kin-lane.github.io/blog/apis.json"
-    },
-    {
-      "name": "Building Block API",
-      "url": "https://kin-lane.github.io/buildingblock/apis.json"
-    },
-    {
-      "name": "Certification API",
-      "url": "https://kin-lane.github.io/certification/apis.json"
-    },
-    {
-      "name": "Curated API",
-      "url": "https://kin-lane.github.io/curated/apis.json"
-    },
-    {
-      "name": "Glossary API",
-      "url": "https://kin-lane.github.io/glossary/apis.json"
-    },
-    {
-      "name": "Image API",
-      "url": "https://kin-lane.github.io/image/apis.json"
-    },
-    {
-      "name": "Job API",
-      "url": "https://kin-lane.github.io/job/apis.json"
-    },
-    {
-      "name": "Keyword API",
-      "url": "https://kin-lane.github.io/keyword/apis.json"
-    },
-    {
-      "name": "Link API",
-      "url": "https://kin-lane.github.io/link/apis.json"
-    },
-    {
-      "name": "Linkrot API",
-      "url": "https://kin-lane.github.io/linkrot/apis.json"
-    },
-    {
-      "name": "News API",
-      "url": "https://kin-lane.github.io/news/apis.json"
-    },
-    {
-      "name": "Note API",
-      "url": "https://kin-lane.github.io/note/apis.json"
-    },
-    {
-      "name": "Organization API",
-      "url": "https://kin-lane.github.io/organization/apis.json"
-    },
-    {
-      "name": "Page API",
-      "url": "https://kin-lane.github.io/page/apis.json"
-    },
-    {
-      "name": "Paper API",
-      "url": "https://kin-lane.github.io/paper/apis.json"
-    },
-    {
-      "name": "Patent API",
-      "url": "https://kin-lane.github.io/patent/apis.json"
-    },
-    {
-      "name": "People API",
-      "url": "https://kin-lane.github.io/people/apis.json"
-    },
-    {
-      "name": "Project API",
-      "url": "https://kin-lane.github.io/project/apis.json"
-    },
-    {
-      "name": "Question API",
-      "url": "https://kin-lane.github.io/question/apis.json"
-    },
-    {
-      "name": "Slide API",
-      "url": "https://kin-lane.github.io/slide/apis.json"
-    },
-    {
-      "name": "Tag API",
-      "url": "https://kin-lane.github.io/tag/apis.json"
-    },
-    {
-      "name": "Task API",
-      "url": "https://kin-lane.github.io/task/apis.json"
-    },
-    {
-      "name": "Tip API",
-      "url": "https://kin-lane.github.io/tip/apis.json"
-    },
-    {
-      "name": "Tool API",
-      "url": "https://kin-lane.github.io/tool/apis.json"
-    },
-    {
-      "name": "Video API",
-      "url": "https://kin-lane.github.io/video/apis.json"
-    }
-  ],
-  "maintainers": [
-    {
-      "FN": "API Evangliest",
-      "X-twitter": "apievangelist",
-      "email": "info@apievangelist.com"
-    }
-  ]
-}
+[{
+	"name": "Curated API",
+	"description": "As I look through the thousands of tweets, blog posts, and other items I read from across the API space, I curate them as part of my regular research. I put them into each research bucket, and make them availble via each reserch project. You can access via this API, and use in real-time as I curate and manage each week.",
+	"image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-abundance.png",
+	"x-open-ranking": "0",
+	"tags": ["Kin Lane Curated APi"],
+	"created": "2016-04-04",
+	"modified": "2016-04-04",
+	"url": "https://kin-lane.github.io/curated/"
+	"specificationVersion": "0.14",
+	"apis": [{
+		"name": "Kin Lane Curated",
+		"description": "<p>As I look through the thousands of tweets, blog posts, and other items I read from across the API space, I curate them as part of my regular research. I put them into each research bucket, and make them availble via each reserch project. You can access via this API, and use in real-time as I curate and manage each week.</p>",
+		"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/kin.png",
+		"humanURL": "https://kin-lane.github.io/curated/",
+		"baseURL": "https://kin-lane.github.io/curated/",
+		"tags": ["Kin Lane Curated APi"],
+		"properties": [{
+			"type": "x-openapi-spec",
+			"url": "api-commons/openapi-spec.json"
+		}]
+	}],
+	"x-common": [{
+		"type": "x-blog-rss-feed",
+		"url": "http://www.talkwalker.com/alerts/rss/NG2GCZBIIN4ULOCFJRSUK6EIY2AZLCE2YTABNE6EHW4OAA2B53FA%3D%3D%3D%3D"
+	},
+	{
+		"type": "x-authentication-overview",
+		"url": "authentication/"
+	},
+	{
+		"type": "x-base-url-for-api",
+		"url": "http://api.kinlane.com"
+	},
+	{
+		"type": "x-blog",
+		"url": "blog/"
+	},
+	{
+		"type": "x-blog-rss-feed",
+		"url": "blog.xml"
+	},
+	{
+		"type": "x-change-log",
+		"url": "change-log/"
+	},
+	{
+		"type": "x-portal",
+		"url": "https://kin-lane.github.io"
+	},
+	{
+		"type": "x-documentation",
+		"url": "documentation/"
+	},
+	{
+		"type": "x-faq",
+		"url": "frequently-asked-questions/"
+	},
+	{
+		"type": "x-getting-started",
+		"url": "getting-started/"
+	},
+	{
+		"type": "x-github",
+		"url": "https://github.com/kinlane"
+	},
+	{
+		"type": "x-issues",
+		"url": "issues/"
+	},
+	{
+		"type": "x-login",
+		"url": "https://apievangelist.3scale.net/login"
+	},
+	{
+		"type": "x-dedicated-plans--pricing-page",
+		"url": "plans/"
+	},
+	{
+		"type": "x-privacy-policy-page",
+		"url": "privacy-policy/"
+	},
+	{
+		"type": "x-road-map",
+		"url": "road-map/"
+	},
+	{
+		"type": "x-selfservice-registration",
+		"url": "https://apievangelist.3scale.net/signup"
+	},
+	{
+		"type": "x-status-dashboard",
+		"url": "status/"
+	},
+	{
+		"type": "x-support-overview-page",
+		"url": "support/"
+	},
+	{
+		"type": "x-terms-of-service-page",
+		"url": "terms-of-service/"
+	},
+	{
+		"type": "x-twitter",
+		"url": "https://twitter.com/kinlane"
+	},
+	{
+		"type": "x-api-plan",
+		"url": "api-commons/api-plan.json"
+	}],
+	"include": [{
+		"name": "Parent",
+		"url": "https://kin-lane.github.io/curated//apis.yaml"
+	}],
+	"maintainers": [{
+		"FN": "Kin Lane",
+		"x-twitter": "apievangelist",
+		"email": "info@apievangelist.com"
+	}]
+}]
